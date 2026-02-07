@@ -10,5 +10,7 @@ urlpatterns = [
         name='completed_list'
     ),
     path('all/', views.AllTasksView.as_view(), name='all_tasks'),
+    path('toggle/<int:task_id>/', views.ToggleTaskView.as_view(), name='toggle_task'),
+    path('delete/<int:task_id>/', views.DeleteTaskView.as_view(), name='delete_task'),
 ]
 
